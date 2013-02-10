@@ -1,0 +1,38 @@
+<signatures>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="PackageSignature">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+      <SignatureMethod Algorithm="http://www.w3.org/TR/xmldsig-core#rsa-sha1"/>
+      <Reference URI="#PackageContents">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <DigestValue>hR7gCDTpvYvfdWKUKPF3FITokTjXbuoVtNvA2dEJ6jA=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue Id="PackageSignatureValue">C+wOn3imN8JWETGSD7Wi7WeGQw0Rt2S9io39Pm3yhicvzEgHGk+bgJ85kINR+MORvxHCUri5ztGT
+wVAuDiwmtYllVFDnAr6F06CDRY+XLQpocLZ57zJNW+ZLIIGlHISd8xX2anW03HUYsRBm6COyhSYW
+MHqJjHbujcosqVVVNb0=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIICJTCCAY2gAwIBAgIaNzgwN2E3MTQ6MTMyNGRmOGE3MWM6LTgwMDAwDQYJKoZIhvcNAQEFBQAw
+PzELMAkGA1UEBhMCQkUxCTAHBgNVBAoTADEJMAcGA1UECxMAMRowGAYDVQQDExFXb3V0ZXIgVmVy
+d2VpcmRlcjAeFw0xMTA5MDgxMTM1MzNaFw0zNjA5MDkxMTM1MzNaMD8xCzAJBgNVBAYTAkJFMQkw
+BwYDVQQKEwAxCTAHBgNVBAsTADEaMBgGA1UEAxMRV291dGVyIFZlcndlaXJkZXIwgZ8wDQYJKoZI
+hvcNAQEBBQADgY0AMIGJAoGBAIhfvWqFcGc0BUL/mjZkqWrg24L3pzCjUVpXYNW+OKhbXA3QxJTD
+/hM41oZVFTsApkDO7kIUNV5DPxlR4uZ1qnsacf3rj1WCYtd8m0291JxnuffZceLisgRmkomXd9Xm
+NOsg3IodZK3cybN+1z4aVNrWkw1vwAxbTjXbca+w1rqJAgMBAAGjFzAVMBMGA1UdJQQMMAoGCCsG
+AQUFBwMDMA0GCSqGSIb3DQEBBQUAA4IAgQBaMw4833ONASD/iCjeY3sdnJFUo3OO0P7tX1SN5Va/
+5bSBiOKUghNO/TsH66+a2wjGoEQCvbByO8PK3VjlVnsNnJztB1NfmjPjlTXrq7QP3F+IDUPgeRVV
+QeVHin00p9cmLs1gOewfIINQxVGSnXUGhAieMlWpNyw9dvhaX63Kew==</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+    <Object>
+      <Manifest Id="PackageContents">
+        <Reference URI="mimetype"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>QfjPqwYNSozTaKi3Ar1Veog4uaFk5DPieQA0v9uRJdY=</DigestValue></Reference><Reference URI="META-INF/ANE/extension.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>/YeBZDWTxzewFlJoTwBMZc04tL2XxAKJ5wacZM6iSrk=</DigestValue></Reference><Reference URI="catalog.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>F1RpewG1xJcokx0DAn/zRv1SIySDcK0p7VnalGiWMDs=</DigestValue></Reference><Reference URI="library.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>MTbsbkvFTesRZvMx1DDJgHcFJpAb3tFIISFI3oWMu+w=</DigestValue></Reference><Reference URI="META-INF/ANE/Windows-x86/JoystickManager.dll"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>G3pDT620486EwAXDDY/i5hJcBGZgNOJnzWWg2Qnj9FU=</DigestValue></Reference><Reference URI="META-INF/ANE/Windows-x86/library.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>MTbsbkvFTesRZvMx1DDJgHcFJpAb3tFIISFI3oWMu+w=</DigestValue></Reference>
+      </Manifest>
+    </Object>
+    
+  </Signature>
+</signatures>

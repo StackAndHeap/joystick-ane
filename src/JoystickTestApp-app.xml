@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.0
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<extensions>
+		<extensionID>com.stackandheap.ane.joystick.JoystickManager</extensionID>
+	</extensions>
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+	<id>JoystickTestApp</id>
+
+	<!-- Used as the filename for the application. Required. -->
+	<filename>JoystickTestApp</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<name>JoystickTestApp</name>
+	
+	<!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 . -->
+	<versionNumber>0.0.0</versionNumber>
+
+	<initialWindow>
+		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+		<autoOrients>false</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>false</visible>
+    </initialWindow>
+
+	<supportedProfiles>extendedDesktop</supportedProfiles>
+
+</application>

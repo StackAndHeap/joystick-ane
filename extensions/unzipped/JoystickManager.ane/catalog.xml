@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/stackandheap/ane/joystick/event/JoystickEvent" mod="1360527841387" signatureChecksum="4268388736" >
+        <def id="com.stackandheap.ane.joystick.event:JoystickEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/stackandheap/ane/joystick/JoystickCapabilities" mod="1360528104988" signatureChecksum="1776723487" >
+        <def id="com.stackandheap.ane.joystick:JoystickCapabilities" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/stackandheap/ane/joystick/JoystickState" mod="1360528104975" signatureChecksum="535770381" >
+        <def id="com.stackandheap.ane.joystick:JoystickState" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/stackandheap/ane/joystick/event/JoystickButtonEvent" mod="1360527841391" signatureChecksum="1597456595" >
+        <def id="com.stackandheap.ane.joystick.event:JoystickButtonEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.stackandheap.ane.joystick.event:JoystickEvent" type="i" /> 
+      </script>
+      <script name="com/stackandheap/ane/joystick/JoystickManager" mod="1360528518447" signatureChecksum="3490569676" >
+        <def id="com.stackandheap.ane.joystick:JoystickManager" /> 
+        <dep id="com.stackandheap.ane.joystick:JoystickState" type="e" /> 
+        <dep id="com.stackandheap.ane.joystick:JoystickCapabilities" type="e" /> 
+        <dep id="com.stackandheap.ane.joystick.event:JoystickEvent" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.utils:Timer" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="com.stackandheap.ane.joystick.event:JoystickButtonEvent" type="e" /> 
+        <dep id="flash.events:TimerEvent" type="e" /> 
+        <dep id="com.stackandheap.ane.joystick.event:JoystickMoveEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.stackandheap.ane.joystick:JoystickState" type="s" /> 
+        <dep id="com.stackandheap.ane.joystick:JoystickCapabilities" type="s" /> 
+        <dep id="flash.utils:Timer" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.events:TimerEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="_a410b9a80bf3621ed66ca39e55a2a73fd0c14f4d098025991e2e7bf647f0d8fb_flash_display_Sprite" mod="1360528780194" signatureChecksum="3312876269" >
+        <def id="_a410b9a80bf3621ed66ca39e55a2a73fd0c14f4d098025991e2e7bf647f0d8fb_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/stackandheap/ane/joystick/event/JoystickMoveEvent" mod="1360527841374" signatureChecksum="603607383" >
+        <def id="com.stackandheap.ane.joystick.event:JoystickMoveEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.stackandheap.ane.joystick.event:JoystickEvent" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="3136ec6e4bc54deb1166f331d430c980770526901bded148212148de858cbbec"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

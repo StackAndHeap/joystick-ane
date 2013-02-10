@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+					   xmlns:s="library://ns.adobe.com/flex/spark"
+					   applicationComplete="applicationCompleteHandler(event)">
+
+	<fx:Script>
+		<![CDATA[
+		import com.stackandheap.ane.joystick.JoystickCapabilities;
+		import com.stackandheap.ane.joystick.JoystickManager;
+		import com.stackandheap.ane.joystick.JoystickState;
+		import com.stackandheap.ane.joystick.event.JoystickButtonEvent;
+		import com.stackandheap.ane.joystick.event.JoystickEvent;
+		import com.stackandheap.ane.joystick.event.JoystickMoveEvent;
+
+		import mx.events.FlexEvent;
+
+		private var _joystickManager:JoystickManager;
+
+		protected function applicationCompleteHandler( event:FlexEvent ):void
+		{
+			_joystickManager = new JoystickManager();
+			_joystickManager.addEventListener( JoystickEvent.CONNECTED, ext_connectedHandler );
+			_joystickManager.addEventListener( JoystickEvent.DISCONNECTED, ext_disconnectedHandler );
+			_joystickManager.addEventListener( JoystickEvent.MOVE, ext_moveHandler );
+			_joystickManager.addEventListener( JoystickEvent.PRESS, ext_pressHandler );
+			_joystickManager.addEventListener( JoystickEvent.RELEASE, ext_releaseHandler );
+
+			var joystickIndices:Array = _joystickManager.connectedJoysticks;
+			for (var i:uint = 0; i < joystickIndices.length; i++)
+			{
+				logCapabilities( joystickIndices[i] );
+			}
+		}
+
+		private function ext_connectedHandler( event:JoystickEvent ):void
+		{
+			log( "Joystick " + event.index + " connected" );
+			logCapabilities( event.index );
+		}
+
+		private function ext_disconnectedHandler( event:JoystickEvent ):void
+		{
+			log( "Joystick " + event.index + " disconnected" );
+			var textArea:TextArea = this["log" + (event.index + 1)];
+			textArea.text = "disconnected";
+		}
+
+		private function ext_moveHandler( event:JoystickMoveEvent ):void
+		{
+			log( "Axis " + event.axisIndex + " moved to value " + event.value + " (raw value: " + event.rawValue + ") on joystick " + event.index );
+		}
+
+		private function ext_pressHandler( event:JoystickButtonEvent ):void
+		{
+			log( "Button " + event.buttonIndex + " pressed on joystick " + event.index );
+		}
+
+		private function ext_releaseHandler( event:JoystickButtonEvent ):void
+		{
+			log( "Button " + event.buttonIndex + " released on joystick " + event.index );
+		}
+
+		private function logCapabilities( index:uint ):void
+		{
+			var caps:JoystickCapabilities = _joystickManager.getJoystickCapabilities( index );
+			var state:JoystickState = _joystickManager.getJoystickState( index );
+			var textArea:TextArea = this["log" + (index + 1)];
+			textArea.text = "Joystick " + index + "\n"
+					+ "====================\n\n"
+					+ "Capabilities:\n"
+					+ "--------------\n"
+					+ "Manufacturer id: " + caps.manufacturerID + "\n"
+					+ "Product id: " + caps.productID + "\n"
+					+ "Num buttons: " + caps.numButtons + "\n"
+					+ "Num axes: " + caps.numAxes + "\n"
+					+ "minX: " + caps.minX + "\n"
+					+ "maxX: " + caps.maxX + "\n"
+					+ "minY: " + caps.minY + "\n"
+					+ "maxY: " + caps.maxY + "\n"
+					+ "minZ: " + caps.minZ + "\n"
+					+ "maxZ: " + caps.maxZ + "\n";
+		}
+
+		private function log( message:String ):void
+		{
+			textArea.text = message + "\n" + textArea.text;
+		}
+		]]>
+	</fx:Script>
+
+	<s:layout>
+		<s:VerticalLayout paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10"/>
+	</s:layout>
+
+	<s:HGroup width="100%" height="100%">
+		<s:TextArea id="log1" width="100%" height="100%"/>
+		<s:TextArea id="log2" width="100%" height="100%"/>
+		<s:TextArea id="log3" width="100%" height="100%"/>
+		<s:TextArea id="log4" width="100%" height="100%"/>
+	</s:HGroup>
+
+	<s:TextArea id="textArea" width="100%" height="100%"/>
+
+</s:WindowedApplication>
